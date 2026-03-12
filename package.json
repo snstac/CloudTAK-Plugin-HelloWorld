@@ -1,0 +1,41 @@
+{
+    "name": "cloudtak-plugin-sample",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "",
+    "homepage": "https://github.com/dfpc-coe/cloudtak-plugin-sample#readme",
+    "bugs": {
+        "url": "https://github.com/dfpc-coe/cloudtak-plugin-sample/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dfpc-coe/cloudtak-plugin-sample.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint .",
+        "check": "vue-tsc --noEmit"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@tak-ps/cloudtak": "file:../CloudTAK/api/web",
+        "@tak-ps/vue-tabler": "^4.2.1",
+        "@turf/boolean-point-in-polygon": "^7.3.1",
+        "@typescript-eslint/eslint-plugin": "^8.52.0",
+        "@typescript-eslint/parser": "^8.52.0",
+        "@vueuse/core": "^14.1.0",
+        "@vueuse/rxjs": "^14.1.0",
+        "eslint": "^10.0.1",
+        "globals": "^17.3.0",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.52.0",
+        "vue": "^3.5.26",
+        "vue-tsc": "^3.2.2"
+    }
+}
