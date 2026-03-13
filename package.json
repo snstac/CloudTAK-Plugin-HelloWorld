@@ -1,15 +1,15 @@
 {
-    "name": "cloudtak-plugin-sample",
+    "name": "cloudtak-plugin-helloworld",
     "version": "1.0.0",
     "type": "module",
     "description": "",
-    "homepage": "https://github.com/dfpc-coe/cloudtak-plugin-sample#readme",
+    "homepage": "https://github.com/snstac/cloudtak-plugin-helloworld#readme",
     "bugs": {
-        "url": "https://github.com/dfpc-coe/cloudtak-plugin-sample/issues"
+        "url": "https://github.com/snstac/cloudtak-plugin-helloworld/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dfpc-coe/cloudtak-plugin-sample.git"
+        "url": "git+https://github.com/snstac/cloudtak-plugin-helloworld.git"
     },
     "license": "ISC",
     "author": "",
