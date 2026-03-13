@@ -2,12 +2,12 @@ import type { App } from 'vue';
 import { h } from 'vue';
 import type { PluginAPI, PluginInstance } from '@tak-ps/cloudtak';
 import MenuTemplate from './lib/MenuTemplate.vue';
-import SampleContainer from './lib/SampleContainer.vue';
-import IconSampleUrl from './lib/Sample.svg';
+import HelloWorldContainer from './lib/HelloWorldContainer.vue';
+import IconHelloWorldUrl from './lib/HelloWorld.svg';
 
-const IconSample = {
+const IconHelloWorld = {
     render: () => h('img', {
-        src: IconSampleUrl,
+        src: IconHelloWorldUrl,
         width: 32,
         height: 32
     })
@@ -29,27 +29,27 @@ export default class Test {
 
     async enable(): Promise<void> {
         this.api.routes.add({
-            path: 'plugin-sample',
-            name: 'home-menu-plugin-sample',
+            path: 'plugin-helloworld',
+            name: 'home-menu-plugin-helloworld',
             component: {
-                render: () => h(MenuTemplate, { name: 'Sample', backType: 'close' }, {
-                    default: () => h(SampleContainer, { api: this.api })
+                render: () => h(MenuTemplate, { name: 'HelloWorld', backType: 'close' }, {
+                    default: () => h(HelloWorldContainer, { api: this.api })
                 })
             }
         }, 'home-menu');
 
         this.api.menu.add({
-            key: 'sample',
-            label: 'Sample',
-            route: 'home-menu-plugin-sample',
-            tooltip: 'Sample',
-            description: 'Sensor Dashboard',
-            icon: IconSample
+            key: 'HelloWorld',
+            label: 'HelloWorld',
+            route: 'home-menu-plugin-helloworld',
+            tooltip: 'HelloWorld',
+            description: 'Hello World Plugin',
+            icon: IconHelloWorld
         });
     }
 
     async disable(): Promise<void> {
-        this.api.menu.remove('sample');
-        this.api.router.removeRoute('home-menu-plugin-sample');
+        this.api.menu.remove('HelloWorld');
+        this.api.router.removeRoute('home-menu-plugin-helloworld');
     }
 }
